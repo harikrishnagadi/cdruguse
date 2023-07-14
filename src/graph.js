@@ -1,6 +1,9 @@
 import data from './data.json';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import {Chart, Filler} from 'chart.js';
+
+Chart.register(Filler);
 
 
 
