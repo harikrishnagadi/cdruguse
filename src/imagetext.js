@@ -9,9 +9,7 @@ const CaptionDiv = (props) => {
   <div className="pt-2 md:p-8 text-center md:text-center">
     <blockquote>
       <p className=" font-medium text-white">
-        “Tailwind CSS is the only framework that I've seen scale
-        on large teams. It’s easy to customize, adapts to any design,
-        and the build size is tiny.”
+        “{props.text}”
       </p>
     </blockquote>
     <figcaption className="font-base mt-5">
