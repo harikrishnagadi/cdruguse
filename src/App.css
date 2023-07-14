@@ -1,3 +1,5 @@
+@import "rsuite/dist/rsuite.css";
+
 body,
 html {
   margin: 0;
@@ -46,7 +48,6 @@ nav ul li a.active {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 48px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -59,14 +60,28 @@ nav ul li a.active {
   /*background-image: url('image1.jpg'); /* Replace with your own image */
 }
 
-p{
-  font-size:1vw;
+.flexsection2 {
+flex-direction: column;
 }
+
+p{
+  font-size:2.5vw;
+  text-align: left;
+  padding-left: 5rem;
+  font: 2rem 'AmstelvarAlpha', sans-serif;
+}
+a{
+  color: white;
+  text-decoration:none;
+  
+}
+
+
 
 
 .element:nth-child(even) {
   background-color: #333;
-  background-image: url('../public/section1.png');
+  background-image: url('../public/background.jpg');
   color: #ff6f00;
   /*background-image: url('image2.jpg'); /* Replace with your own image */
 }
