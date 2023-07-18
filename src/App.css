@@ -1,13 +1,19 @@
 
-body,
+body{
+  min-height: 100%;
+}
 html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  min-height: 100%;
 }
 
 .App {
   text-align: center;
+  background-color: #000000;
 }
+
 
 nav {
   position: fixed;
@@ -38,8 +44,9 @@ nav ul li a {
 }
 
 nav ul li a.active {
-  color: #ff6f00;
+  color: #9a39b3;
 }
+
 
 .element {
   height: 100vh;
@@ -51,39 +58,90 @@ nav ul li a.active {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #ff6f00;
+  background-color:#000000;
+  /* background-color: #ff6f00; */
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
 
-.element:nth-child(odd) {
-  background-color: #ff6f00;
-  color: #fff;
-  /*background-image: url('image1.jpg'); /* Replace with your own image */
+
+  .element {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+  }
+
 }
 
 a{
   color: white;
 }
 
+h1{
+  animation-duration: 3s;
+  animation-name: slidein;
+}
 
-
-.element:nth-last-of-type(3){
+.element:nth-last-of-type(5){
   background-image: url('../public/background.jpg');
-  color: #ff6f00;
+  color: #9a39b3;
 }
 
-.element:nth-last-of-type(1){
-  background-color: #111315;
+
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+
+  .background{
+    background-image: url('../public/background2.jpg');
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh; 
+ }
+
+
+}
+.element:nth-last-of-type(4){
+  background-color: #9a39b3;
+  height: fit-content;
+  padding-bottom: 3%;
+  color: white;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .element:nth-last-of-type(4){
+    padding-bottom: 10%;
+    height: auto;
+  }
+}
 
 .lastsection{
   width: 100%;
   height: 100%;
-  background-color: #ff0000;
+  background-color: #bd0000;
 }
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .element:nth-last-of-type(3){
+    height: auto;
+    overflow: hidden;
+  }
+}
 
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .element:nth-last-of-type(2){
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+.element:nth-last-of-type(2){
+  height: auto;
+}
+
+.element:nth-last-of-type(3){
+  height: auto;
+}
 
 .scroll-top-button {
   position: fixed;
@@ -98,5 +156,10 @@ a{
 }
 
 .scroll-top-button:hover {
-  background-color: #ff6f00;
+  background-color: #9a39b3;
+}
+
+.ititle{
+  color:rgb(84, 84, 84);
+  margin-bottom: 1%;
 }
