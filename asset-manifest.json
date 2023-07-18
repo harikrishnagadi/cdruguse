@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cdruguse/static/css/main.60eefc2b.css",
-    "main.js": "/cdruguse/static/js/main.60035b5a.js",
+    "main.css": "/cdruguse/static/css/main.218980ec.css",
+    "main.js": "/cdruguse/static/js/main.6ff0809f.js",
     "static/js/787.f03333d5.chunk.js": "/cdruguse/static/js/787.f03333d5.chunk.js",
     "static/media/clara.jpeg": "/cdruguse/static/media/clara.179256750933178e93df.jpeg",
     "static/media/katrin.jpg": "/cdruguse/static/media/katrin.c4643812bc0a77ce179f.jpg",
@@ -16,12 +16,12 @@
     "static/media/Renate.jpg": "/cdruguse/static/media/Renate.a319d7b95e95dfa06bb8.jpg",
     "static/media/Andrea_Betz_Diakonie.jpeg": "/cdruguse/static/media/Andrea_Betz_Diakonie.01fd564dabf2f4a19afe.jpeg",
     "index.html": "/cdruguse/index.html",
-    "main.60eefc2b.css.map": "/cdruguse/static/css/main.60eefc2b.css.map",
-    "main.60035b5a.js.map": "/cdruguse/static/js/main.60035b5a.js.map",
+    "main.218980ec.css.map": "/cdruguse/static/css/main.218980ec.css.map",
+    "main.6ff0809f.js.map": "/cdruguse/static/js/main.6ff0809f.js.map",
     "787.f03333d5.chunk.js.map": "/cdruguse/static/js/787.f03333d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60eefc2b.css",
-    "static/js/main.60035b5a.js"
+    "static/css/main.218980ec.css",
+    "static/js/main.6ff0809f.js"
   ]
 }
