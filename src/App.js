@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import styled from 'styled-components';
 import './App.css';
@@ -9,7 +9,27 @@ export const RowGrid = styled.div`display:flex;`;
 export const Col = styled.div`flex: ${(props)=>props.size}`;
 
 const App = () => {
+  const [showButton, setShowButton] = useState(false);
+
   useEffect(() => {
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const elementHeight = windowHeight * 2; // Assuming each element is 100vh
+
+      // Calculate the scroll position for showing or hiding the button
+      const showButtonThreshold = elementHeight - windowHeight;
+
+      if (scrollPosition >= showButtonThreshold) {
+        setShowButton(true);
+      } else {
+        setShowButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
     Events.scrollEvent.register('begin', () => {
       console.log('scrolling has started');
     });
@@ -23,6 +43,8 @@ const App = () => {
     return () => {
       Events.scrollEvent.remove('begin');
       Events.scrollEvent.remove('end');
+      window.removeEventListener('scroll', handleScroll);
+
     };
   }, []);
 
@@ -74,14 +96,14 @@ const App = () => {
       </nav>
 
       <Element name="section1" className="element">
-        <div className="background">
-          <div className="basis-1/2 py-12">
-          <h1 className=" py-20 font-sans text-6xl md:text-8xl  font-bold">
+        <div className="background w-full">
+          <div className="basis-1/2 mt-20  pt-16 md:pt-20 ">
+          <h1 className="font-sans text-6xl md:text-8xl  font-bold">
           Konsumräume
           </h1>
           </div>
-          <div className="basis-1/2 py-20 md:py-28">
-          <h1 className="font-sans text-6xl md:text-8xl font-bold">
+          <div className="basis-1/2 mt-20 pt-14 md:pt-28">
+          <h1 className="font-sans text-6xl md:text-8xl font-bold ">
           retten leben
         </h1>
           </div>
@@ -124,18 +146,18 @@ const App = () => {
       </Element>
 
       <Element name="section3" className="element">
-      <div className='md:flex md:basis-full h-full  justify-center'>
-        <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col md:mt-5 pt-5 w-ful border-slate-700 md:border md:rounded-2xl'>
+      <div className='citationsdiv md:flex md:basis-full h-full justify-center'>
+      <div className='md:flex  justify-center md:basis-1/3 md:h-full flex-col mt-5 md:pt-5 w-full  border-slate-800 md:border md:rounded-lg md:bg-slate-900'>
           <CaptionDiv className='caption' source={require('./images/clara.jpeg')} name="Clara Nitsche" text="Konsumräume retten leben! Das haben bereits viele andere Bundesländer unter Beweis gestellt. Dort wurde klar: Es wird keinesfalls zu Drogenkonsum animiert - vielmehr können hier schwer erreichbare Menschen unterstützt werden. Der Freistaat verhindert, dass Menschen in Bayern angemessene Hilfe bekommen. Das muss sich dringend ändern."  title="Stadträtin, Die Grünen - Rosa Liste"/>
           <CaptionDiv className='caption' source={require('./images/katrin.jpg')} name="Katrin Bahr" text=" Drug Checking und Drogenkonsumräume sind wichtige Schritte, um die Leben vieler Menschen zu retten. Drogenkonsumräume wirken gesamtgesellschaftlich sichernd und problemlösend. Deswegen hören wir nicht auf, Drogenkonsumräume hier in Bayern zu fordern! Denn alle Menschen haben ein Recht auf ein würdiges Leben."   title="Geschäftsführende Vorständin Condrobs"/>
-          <CaptionDiv source={require('./images/Renate-transformed.jpeg')} name="Dr. Renate Demharter" text="In Drogenkonsumräumen kann durch geschulte Laien (z.B.  Streetworker) bei Intoxikationen z.B. mit nasalem Antidot schneller geholfen werden, als der Rettungsdienst ankommen kann!"  title="FÄ für Notfallmedizin, ÄKV Augsburg"/>
+          <CaptionDiv className='caption' source={require('./images/Renate-transformed.jpeg')} name="Dr. Renate Demharter" text="In Drogenkonsumräumen kann durch geschulte Laien (z.B.  Streetworker) bei Intoxikationen z.B. mit nasalem Antidot schneller geholfen werden, als der Rettungsdienst ankommen kann!"  title="FÄ für Notfallmedizin, ÄKV Augsburg"/>
         </div>
-        <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col mt-5 md:pt-5 w-full  border-slate-700 md:border md:rounded-2xl'>
+        <div className='md:flex  justify-center md:basis-1/3 md:h-full flex-col mt-5 md:pt-5 w-full  border-slate-800 md:border md:rounded-lg md:bg-slate-900'>
          <CaptionDiv source={require('./images/barbara.jpeg')} name="Barbara Likus" text="Niemand wird durch die unhygienischen Konsumbedingungen von seiner Sucht abgehalten. Im Gegenteil, ohne Drugchecking ist es fast unmöglich, sicher zu dosieren. Ein Drogenkonsumraum ist ein Ort, der das Leben von Süchtigen schützt, aber auch die Nachbarschaft sicherer macht."  title="Stadträtin, SPD"/>
         <CaptionDiv source={require('./images/tobias.jpeg')} name="Dr. Tobias " text="Drogenkonsumräume helfen nicht nur dabei, das Gesundheitssystem zu entlasten und die Zahl der Drogentoten zu reduzieren. Auch die Übertragung von Hepatitis B und C oder auch HIV kann durch einen überwachten Konsum mit sauberen Spritzen verhindert werden."  title="Geschäftsführer, Münchner aids-hilfe"/>
         <CaptionDiv source={require('./images/Beatrix.jpeg')} name="Beatrix Zurek" text="Drogenabhängige Menschen gelten als Menschen mit Behinderungen. Auch für sie gilt die UN-Behindertenrechtskonvention, die ein Recht auf Teilhabe, Unversehrtheit und Diskriminierungsfreiheit zusichert. Drogenkonsumräume sind daher menschenrechtlich geboten."   title="Gesundheitsreferentin, LHM"/>
          </div>
-         <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col mt-5  md:pt-5 w-full border-slate-700 md:border md:rounded-2xl'>
+         <div className='md:flex  justify-center md:basis-1/3 md:h-full flex-col mt-5 md:pt-5 w-full  border-slate-800 md:border md:rounded-lg md:bg-slate-900'>
          <CaptionDiv source={require('./images/stefan.jpeg')} name="Stefan Jagel" text="Drogenkonsumräume fördern nicht den Konsum von Drogen, wie langjährige wissenschaftliche Auswertungen zeigen. Sie reduzieren Notfälle und Tote, schaffen Beratungsvertrauen. Die Zahl der Drogentoten steigt jährlich, jeder Drogentote, der durch so einen Raum verhindert werden kann, ist ein eindringliches Zeichen politischen Handelns."  title="Stadtrat, Die Linke"/>
          <CaptionDiv source={require('./images/matthias-laub.jpg')} name="Matthias Laub" text="Drogenabhängige Menschen gelten als Menschen mit Behinderungen. Auch für sie gilt die UN-Behindertenrechtskonvention, die ein Recht auf Teilhabe, Unversehrtheit und Diskriminierungsfreiheit zusichert. Drogenkonsumräume sind daher menschenrechtlich geboten."   title="Prof. Dr. Matthias Laub, Hochschule Landshut"/>
          <CaptionDiv source={require('./images/Hanna.jpeg')} name="Hanna Sammüller Gradl" text="Drogenkonsumräume können Leben retten und denjenigen, die Unterstützung benötigen, die Chance auf einen Neuanfang geben. Daher stehe ich von ganzem Herzen hinter dem Wunsch nach der Einrichtung solcher Räume in München."  title="Kreisverwaltungsreferentin LHM"/>
@@ -144,7 +166,7 @@ const App = () => {
       </Element>
 
         <Element>
-        <p className='text-white'>
+        <p className='text-white overflow-x-hidden'>
           <div className='text-2xl text-cyan-400 mb-5'>  Weitere Unterstützer*innen </div>
                   Arabackyj	Claudia	
             <p className='ititle text-sm'>SPD Stadträtin in Nürnberg, Stellvertretende Fraktionsvorsitzende</p> 	
@@ -245,10 +267,11 @@ const App = () => {
 
         </Element>
 
-
+      {showButton &&
       <button className="scroll-top-button" onClick={scrollToTop}>
         Scroll to Top
       </button>
+      }
     </div>
   );
 };
