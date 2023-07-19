@@ -83,8 +83,9 @@ h1{
   animation-name: slidein;
 }
 
-.element:nth-last-of-type(5){
+.element:nth-last-of-type(4){
   background-image: url('../public/background.jpg');
+  background-size: cover;
   color: #9a39b3;
 }
 
@@ -98,10 +99,20 @@ h1{
     max-width: 100%;
     height: 100vh; 
  }
-
-
 }
-.element:nth-last-of-type(4){
+
+/* @media only screen and (min-device-width: 600px) and (max-device-width: 900px) and (-webkit-min-device-pixel-ratio: 10) and (orientation: portrait) {
+
+  .background{
+    background-image: url('../public/background2.jpg');
+    background-size: cover;
+    max-width: 100%;
+    height: 100vh; 
+ }
+} */
+
+
+.element:nth-last-of-type(3){
   background-color: #9a39b3;
   height: fit-content;
   padding-bottom: 3%;
@@ -129,18 +140,19 @@ h1{
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  .element:nth-last-of-type(2){
+  .element:nth-last-of-type(1){
     height: auto;
     overflow: hidden;
   }
 }
 
-.element:nth-last-of-type(2){
+.element:nth-last-of-type(1){
   height: auto;
 }
 
-.element:nth-last-of-type(3){
+.element:nth-last-of-type(2){
   height: auto;
+  margin-bottom: 5%;
 }
 
 .scroll-top-button {

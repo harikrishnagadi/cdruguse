@@ -67,7 +67,7 @@ const App = () => {
               offset={-70}
               duration={500}
             >
-              unterstützer*innen
+              Unterstützer*innen
             </Link>
           </li>
         </ul>
@@ -91,19 +91,20 @@ const App = () => {
       <Element name="section2" className="element">
         <div className=" mt-5 md:flex md:flex-row md:h-full justify-center items-center">
           <div className="block md:flex-row md:h-full basis-1/2 rounded-xl">
-          <div className="flex flex-col md:mt-20">
-            <p className="text-sm md:text-lg md:font-medium justify-center items-center md:mt-10">
+          <div className="flex flex-col md:mt-0">
+            <p className="text-md md:text-lg md:font-medium justify-center text-justify md:ml-10 m-2">
             Die Zahl der Drogentoten ist im letzten Jahr in München erneut dramatisch angestiegen.
             Schon lange ist klar: Konsumräume wie sie in anderen Bundesländern bereits bestehen retten leben!
            <br/>
             <br/>
-            In Bayern gibt es aktuell keine Konsumräume bisher nicht, obwohl die Stadt diese bereits seit langem fordert.
-            2010 und 2018 gab es entsprechende <a href="https://www.muenchen-transparent.de/antraege/5017665"> <i>Stadtratsbeschlüsse.</i></a> 
-            Auch andere Kommunen in Bayern haben sich immer wieder für Konsumräume eingesetzt. 
+            In Bayern gibt es aktuell keine Konsumräume. 
+            Einige Kommunen in Bayern, die bayerischen Bezirkstage sowie die Landeshauptstadt  
+            fordern diese jedoch bereits seit langem. 
+            2010 und 2018 gab es entsprechende <a href="https://www.muenchen-transparent.de/antraege/5017665"> <i>Stadtratsbeschlüsse.</i></a>
             </p>
             <br/>
 
-            <p className="text-sm md:text-lg font-medium">
+            <p className="text-md md:text-lg md:font-medium justify-center text-justify md:ml-10 m-2">
             Die nötige Verordnung wurde bei der bayerischen Staatsregierung erbeten.
             Diese entschied sich aber trotz positiver Erfahrungswerte dagegen.
             wir wollen uns erneut für Drogenkonsumräume in Bayern stark machen und dafür als breites Bündnis eine Petition im bayrischen Landtag einreichen.
@@ -113,7 +114,7 @@ const App = () => {
 
           <div className=" mt-5 md:flex md:basis-1/2 md:px-5 md:flex-col md:h-full md:justify-center md:items-center rounded-xl">
             <div className ='h-60 md:w-full md:h-96 bg-slate-50 rounded-xl'>
-            <LineChart className=" h-60 md:h-full md:w-full"/>
+            <LineChart className="h-80 md:h-full md:w-full"/>
             </div>
             <div className='text-xs text-black italic' > Courtesy: www.Statista.com</div>
             <button type="button" className="w-80 h-20 mt-2 md:mt-10 md:justify-center md:w-80 md:h-50 text-base font-medium text-white bg-gray-900 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300  text-center dark:bg-gray-800 dark:hover:bg-gray-500 dark:focus:ring-white-800"> Zur Petition <br/> Jetzt unterschreiben!</button>
@@ -123,36 +124,24 @@ const App = () => {
       </Element>
 
       <Element name="section3" className="element">
-      <div className='md:flex md:basis-full h-full  justify-cent'>
-        <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col mt-5 w-full'>
-          <CaptionDiv className='caption' source={require('./images/clara.jpeg')} name="Clara Nitsche" text="Drogenabhängige Menschen gelten als Menschen mit Behinderungen. Auch für sie gilt die UN-Behindertenrechtskonvention, die ein Recht auf Teilhabe, Unversehrtheit und Diskriminierungsfreiheit zusichert. Drogenkonsumräume sind daher menschenrechtlich geboten."  title="Stadträtin, Grüne"/>
+      <div className='md:flex md:basis-full h-full  justify-center'>
+        <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col md:mt-5 pt-5 w-ful border-slate-700 md:border md:rounded-2xl'>
+          <CaptionDiv className='caption' source={require('./images/clara.jpeg')} name="Clara Nitsche" text="Konsumräume retten leben! Das haben bereits viele andere Bundesländer unter Beweis gestellt. Dort wurde klar: Es wird keinesfalls zu Drogenkonsum animiert - vielmehr können hier schwer erreichbare Menschen unterstützt werden. Der Freistaat verhindert, dass Menschen in Bayern angemessene Hilfe bekommen. Das muss sich dringend ändern."  title="Stadträtin, Die Grünen - Rosa Liste"/>
           <CaptionDiv className='caption' source={require('./images/katrin.jpg')} name="Katrin Bahr" text=" Drug Checking und Drogenkonsumräume sind wichtige Schritte, um die Leben vieler Menschen zu retten. Drogenkonsumräume wirken gesamtgesellschaftlich sichernd und problemlösend. Deswegen hören wir nicht auf, Drogenkonsumräume hier in Bayern zu fordern! Denn alle Menschen haben ein Recht auf ein würdiges Leben."   title="Geschäftsführende Vorständin Condrobs"/>
+          <CaptionDiv source={require('./images/Renate-transformed.jpeg')} name="Dr. Renate Demharter" text="In Drogenkonsumräumen kann durch geschulte Laien (z.B.  Streetworker) bei Intoxikationen z.B. mit nasalem Antidot schneller geholfen werden, als der Rettungsdienst ankommen kann!"  title="FÄ für Notfallmedizin, ÄKV Augsburg"/>
         </div>
-        <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col mt-5 w-full'>
-         <CaptionDiv source={require('./images/barbara.jpeg')} name="Barbara Likus" text="Drogenabhängige Menschen gelten als Menschen mit Behinderungen. Auch für sie gilt die UN-Behindertenrechtskonvention, die ein Recht auf Teilhabe, Unversehrtheit und Diskriminierungsfreiheit zusichert. Drogenkonsumräume sind daher menschenrechtlich geboten."  title="Stadträtin, SPD"/>
+        <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col mt-5 md:pt-5 w-full  border-slate-700 md:border md:rounded-2xl'>
+         <CaptionDiv source={require('./images/barbara.jpeg')} name="Barbara Likus" text="Niemand wird durch die unhygienischen Konsumbedingungen von seiner Sucht abgehalten. Im Gegenteil, ohne Drugchecking ist es fast unmöglich, sicher zu dosieren. Ein Drogenkonsumraum ist ein Ort, der das Leben von Süchtigen schützt, aber auch die Nachbarschaft sicherer macht."  title="Stadträtin, SPD"/>
         <CaptionDiv source={require('./images/tobias.jpeg')} name="Dr. Tobias " text="Drogenkonsumräume helfen nicht nur dabei, das Gesundheitssystem zu entlasten und die Zahl der Drogentoten zu reduzieren. Auch die Übertragung von Hepatitis B und C oder auch HIV kann durch einen überwachten Konsum mit sauberen Spritzen verhindert werden."  title="Geschäftsführer, Münchner aids-hilfe"/>
+        <CaptionDiv source={require('./images/Beatrix.jpeg')} name="Beatrix Zurek" text="Drogenabhängige Menschen gelten als Menschen mit Behinderungen. Auch für sie gilt die UN-Behindertenrechtskonvention, die ein Recht auf Teilhabe, Unversehrtheit und Diskriminierungsfreiheit zusichert. Drogenkonsumräume sind daher menschenrechtlich geboten."   title="Gesundheitsreferentin, LHM"/>
          </div>
-         <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col mt-5 w-full'>
-         <CaptionDiv source={require('./images/stefan.jpeg')} name="Stefan Jagel" text="Drogenabhängige Menschen gelten als Menschen mit Behinderungen. Auch für sie gilt die UN-Behindertenrechtskonvention, die ein Recht auf Teilhabe, Unversehrtheit und Diskriminierungsfreiheit zusichert. Drogenkonsumräume sind daher menschenrechtlich geboten."  title="Stadtrat, Die Linke"/>
+         <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col mt-5  md:pt-5 w-full border-slate-700 md:border md:rounded-2xl'>
+         <CaptionDiv source={require('./images/stefan.jpeg')} name="Stefan Jagel" text="Drogenkonsumräume fördern nicht den Konsum von Drogen, wie langjährige wissenschaftliche Auswertungen zeigen. Sie reduzieren Notfälle und Tote, schaffen Beratungsvertrauen. Die Zahl der Drogentoten steigt jährlich, jeder Drogentote, der durch so einen Raum verhindert werden kann, ist ein eindringliches Zeichen politischen Handelns."  title="Stadtrat, Die Linke"/>
          <CaptionDiv source={require('./images/matthias-laub.jpg')} name="Matthias Laub" text="Drogenabhängige Menschen gelten als Menschen mit Behinderungen. Auch für sie gilt die UN-Behindertenrechtskonvention, die ein Recht auf Teilhabe, Unversehrtheit und Diskriminierungsfreiheit zusichert. Drogenkonsumräume sind daher menschenrechtlich geboten."   title="Prof. Dr. Matthias Laub, Hochschule Landshut"/>
+         <CaptionDiv source={require('./images/Hanna.jpeg')} name="Hanna Sammüller Gradl" text="Drogenkonsumräume können Leben retten und denjenigen, die Unterstützung benötigen, die Chance auf einen Neuanfang geben. Daher stehe ich von ganzem Herzen hinter dem Wunsch nach der Einrichtung solcher Räume in München."  title="Kreisverwaltungsreferentin LHM"/>
          </div>
       </div>
       </Element>
-
-        <Element name="section4" className="element">
-        <div className='md:flex basis-full h-full justify-center'>
-        <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col mt-5 w-full'>
-          <CaptionDiv source={require('./images/Renate.jpg')} name="Dr. Renate Demharter" text="In Drogenkonsumräumen kann durch geschulte Laien (z.B.  Streetworker) bei Intoxikationen z.B. mit nasalem Antidot schneller geholfen werden, als der Rettungsdienst ankommen kann!"  title="FÄ für Notfallmedizin, ÄKV Augsburg"/>
-          <CaptionDiv source={require('./images/Beatrix.jpeg')} name="Beatrix Zurek" text="Drogenabhängige Menschen gelten als Menschen mit Behinderungen. Auch für sie gilt die UN-Behindertenrechtskonvention, die ein Recht auf Teilhabe, Unversehrtheit und Diskriminierungsfreiheit zusichert. Drogenkonsumräume sind daher menschenrechtlich geboten."   title="Gesundheitsreferentin, LHM"/>
-        </div>
-        <div className='md:flex justify-center md:basis-1/3 md:h-full flex-col mt-5 w-full'>
-         <CaptionDiv source={require('./images/Hanna.jpeg')} name="Hanna Sammüller Gradl" text="Drogenabhängige Menschen gelten als Menschen mit Behinderungen. Auch für sie gilt die UN-Behindertenrechtskonvention, die ein Recht auf Teilhabe, Unversehrtheit und Diskriminierungsfreiheit zusichert. Drogenkonsumräume sind daher menschenrechtlich geboten."  title="Kreisverwaltungsreferentin LHM"/>
-        <CaptionDiv source={require('./images/Andrea_Betz_Diakonie.jpeg')} name="Andrea Betz" text="Drogenabhängige Menschen gelten als Menschen mit Behinderungen. Auch für sie gilt die UN-Behindertenrechtskonvention, die ein Recht auf Teilhabe, Unversehrtheit und Diskriminierungsfreiheit zusichert. Drogenkonsumräume sind daher menschenrechtlich geboten."  title="CEO, Diakonie"/>
-         </div>
-         <div className='flex ustify-center basis-1/3 h-full flex-col mt-5 w-20'>  
-         </div>
-      </div>
-        </Element>
 
         <Element>
         <p className='text-white'>
@@ -196,8 +185,8 @@ const App = () => {
                     <p className='ititle text-sm'> Stadtrat, Fraktionsvorsitzender Die Linke München </p>																					
                     Dr. med. 	Kastenbauer	Uli	
                     <p className='ititle text-sm'>  HIV-Schwerpunktpraxis Schwabing </p>																						
-	                    Likus 	Barbara	Stadträtin 
-                      <p className='ititle text-sm'> SPD Volt		</p>
+	                    Likus 	Barbara	 
+                      <p className='ititle text-sm'> Stadträtin, SPD Volt		</p>
 
 	                  Majewski	Karin	
                     <p className='ititle text-sm'> Geschäftsführung Paritätischer Wohlfahrtsverband, Bezirksverband Oberbayern</p>																			
